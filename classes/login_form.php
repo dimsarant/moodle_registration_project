@@ -15,6 +15,15 @@ class login_form extends moodleform {
         $mform->setType('password',PARAM_TEXT);
 
         $this->add_action_buttons(false,'Login');
+
+        $mform->addElement('html', '<div class="register-button">
+                <div style="display:flex;flex-direction: row;gap:20px;align-items: center;">
+                    <b>Want to register?</b>
+                    <a href="index.php">
+                        <button type="button" class="btn btn-primary">Register</button>
+                    </a>
+                </div>
+            </div>');
     }
 
     public function validation($data, $files) {
