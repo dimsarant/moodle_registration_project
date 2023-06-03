@@ -66,7 +66,7 @@ function generate_random_password($length) {
 
 function sendmail($recipient, $password) {
     // Define the sender of the email
-    $sender = "autodriverentalskalamata@gmail.com";
+    $sender = "example@gmail.com";
 
     // Set up the email parameters
     $subject = 'Welcome to Moodle Project';
