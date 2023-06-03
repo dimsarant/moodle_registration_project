@@ -1,0 +1,37 @@
+<table class="table admintable text-center">
+    <thead>
+        <tr>
+            <th>E-mail</th>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Country</th>
+            <th>Mobile</th>
+            <th>Password</th>
+            <th>Status</th>
+            <th><button class="btn btn-primary btn-sm" onclick="location.href='logout.php'">Logout</button></th>
+        </tr>
+    </thead>
+    <tbody>
+    {{#data}}
+        <tr>
+            <td>{{email}}</td>
+            <td>{{firstname}}</td>
+            <td>{{lastname}}</td>
+            <td>{{country}}</td>
+            <td>{{mobile}}</td>
+            <td>{{password}}</td>
+            <th>{{status}}</th>
+            <td>
+              <button class="btn btn-danger btn-sm" onclick="deleteRecord('{{id}}', '{{email}}')">Delete</button>
+            </td>
+        </tr>
+    {{/data}}
+    {{^data}}
+        <tr>
+            <td colspan="8" class="text-center">
+                No data to display. Add a record
+            </td>
+        </tr>
+    {{/data}}
+    </tbody>
+</table>
